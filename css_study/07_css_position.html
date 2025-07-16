@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    main {
+        width: 300px;
+        height: 400px;
+        background-color: tomato;
+    }
+
+    div {
+        width: 200px;
+        height: 100px;
+        border: 1px solid yellow;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 100px;
+        /* line-height 공간여백
+        height = line-height 글자가 중앙정렬 됨 */
+
+    }
+
+    div:nth-last-of-type(2) {
+        background-color: aqua;
+        opacity: 0.8;
+        /* 투명도 0~1 */
+        position: sticky;
+        overflow: auto;
+        /*position relative - 원래 자기가 있던 위치 기준으로 (top, bottom, left, right)
+          position absolute - 기준(relative), 원래 위치 기준이 아닌 상위 요소 중 relative를 기준으로!
+                                없으면 가장 상위 태그를 기준으로 삼는다
+          position fixed - 뷰포트 기준 (브라우저의 전체화면) 
+          position sticky - 위에서 스크롤로 내리면 같이 자연스럽게 내려옴*/
+        top: 28px;
+        left: 48px;
+
+    }
+</style>
+<body>
+   <main>
+    <div>position: static;</div>
+    <div>position: sticky;</div>
+    <div>position: static;</div>
+    <div>position: static;</div>
+    <div>position: static;</div>
+    <div>position: static;</div>
+    <div>position: static;</div>
+    <!-- 기본값을 따로 정하지 않으면 기본값은 static -->
+    
+   </main>
+</body>
+</html>
