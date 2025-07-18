@@ -64,3 +64,38 @@ console.log(names)
 const findFx = (n) => n === "김소현"
 const foundName = names.find(findFx)
 console.log(foundName)
+
+
+const students = [  //객체로 이루어진 배열
+    {name: "김소현", age: 26},
+    {name: "이소현", age: 27},
+    {name: "박소현", age: 26},
+    {name: "정소현", age: 28},
+    {name: "강소현", age: 26},
+];
+
+console.log(students.find((s) => s.name === "이소현"));
+console.log();
+
+//값 존재 여부: includes() - 배열에 특정 값이 포함되어 있는지 boolean으로 반환
+console.log(names.includes("김소현"))
+//names에 해당 값이 포함되어 있으면 true
+
+//필터링: filter() - 주어진 조건 함수를 통과하는 모든 요소로 새로운 배열을 만든다.
+//원본 배열은 영향을 주지 않음
+const numbers = [1, 2, 3, 4, 5]
+console.log(numbers.filter((n) => n % 2 ===0))
+const even = numbers.filter((n) => n % 2 ===0 )
+console.log(students.filter((student) => student.age === 26))
+
+//map() - 배열의 모든 요소에 대해 주어진 함수를 호출(적용)한 결과를 모아 새로운 배열을 반환
+console.log(numbers.map((n) => n * 10))
+console.log(students.map((student) => {
+    if(student.age === 26) {
+        //나이가 27인 학생은 이름만 있는 새로운 객체를 반환
+        return {
+            name: student.name,
+        };
+    }
+    return student;
+}))
