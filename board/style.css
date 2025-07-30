@@ -1,0 +1,112 @@
+body {
+	margin: 0;
+}
+
+.container {
+	margin: 0;
+	min-height: 100vh;
+}
+
+header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #007bff;
+}
+
+nav {
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+nav > button {
+	border: none;
+	padding: 15px 30px;
+	background-color: transparent;
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+nav > button:hover {
+	background-color: white;
+	color: black;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.page {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	min-width: 700px;
+}
+
+.active {
+	display: flex;
+}
+
+h2 {
+	color: #333333;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+
+input,
+textarea {
+	padding: 10px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+textarea {
+	height: 150px;
+	resize: none;
+}
+
+.btn-submit {
+	padding: 10px;
+	border: none;
+	background-color: #007bff;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+	background-color: #0056b3;
+}
+
+/* 게시물 목록 스타일 */
+#board-list {
+	width: 100%;
+	max-width: 700px;
+	list-style: none;
+	padding: 0;
+}
+
+#board-list > li {
+	padding: 15px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+#board-list > li:hover {
+	background-color: #f9f9f9;
+}
